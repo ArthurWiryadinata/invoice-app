@@ -1,0 +1,137 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "format:INV/{customer_initials}/{issue_date_yymm}/{#####}",
+  "creation": "2026-03-16 14:44:58.161352",
+  "custom": 0,
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "invoice_information_section",
+    "customer",
+    "customer_name",
+    "tanggal_terbit",
+    "customer_initials",
+    "issue_date_yymm",
+    "table_eesh",
+    "total_harga_item",
+    "presentase_pajak",
+    "grand_total",
+    "payment_amount",
+    "outstanding_amount",
+    "payment_status"
+  ],
+  "fields": [
+    {
+      "fieldname": "invoice_information_section",
+      "fieldtype": "Section Break",
+      "label": "Invoice Information"
+    },
+    {
+      "fieldname": "customer",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Customer",
+      "options": "Customer",
+      "reqd": 1
+    },
+    {
+    "fieldname": "customer_name",
+    "fieldtype": "Data",
+    "label": "Customer Name",
+    "read_only": 1,
+    "hidden": 1
+    },
+    {
+      "fieldname": "tanggal_terbit",
+      "fieldtype": "Date",
+      "label": "Tanggal Terbit",
+      "reqd": 1
+    },
+    {
+      "fieldname": "customer_initials",
+      "fieldtype": "Data",
+      "hidden": 1,
+      "label": "Customer Initials",
+      "read_only": 1
+    },
+    {
+      "fieldname": "issue_date_yymm",
+      "fieldtype": "Data",
+      "hidden": 1,
+      "label": "Issue Date YYMM",
+      "read_only": 1
+    },
+    {
+      "fieldname": "table_eesh",
+      "fieldtype": "Table",
+      "label": "Tabel Item",
+      "options": "Invoice Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "total_harga_item",
+      "fieldtype": "Currency",
+      "label": "Total Harga Item",
+      "read_only": 1
+    },
+    {
+      "fieldname": "presentase_pajak",
+      "fieldtype": "Percent",
+      "label": "Presentase Pajak"
+    },
+    {
+      "fieldname": "grand_total",
+      "fieldtype": "Currency",
+      "label": "Grand Total",
+      "read_only": 1
+    },
+    {
+      "fieldname": "payment_amount",
+      "fieldtype": "Currency",
+      "label": "Payment Amount",
+      "read_only": 1
+    },
+    {
+      "fieldname": "outstanding_amount",
+      "fieldtype": "Currency",
+      "label": "Outstanding Amount",
+      "read_only": 1
+    },
+    {
+      "fieldname": "payment_status",
+      "fieldtype": "Select",
+      "label": "Payment Status",
+      "options": "Unpaid\nPartially Paid\nPaid",
+      "read_only": 1
+    }
+  ],
+  "grid_page_length": 50,
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2026-03-16 15:01:30.039711",
+  "modified_by": "Administrator",
+  "module": "Invoice App",
+  "name": "Invoice",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "row_format": "Dynamic",
+  "rows_threshold_for_grid_search": 20,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
+}
