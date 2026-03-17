@@ -2,12 +2,15 @@ Cara Set-up Frappe Framework:
 1. Pastikan Ubuntu sudah tersedia di device
 2. Set-up environment untuk frappe, bench, dll
 3. Ubuntu akan meminta password untuk kegiatan yang diperlukan agar framework berjalan
-4. Jalankan server local untuk mendapatkan IP local(bench start) ![alt text](asset/IP.png), Juga bisa install app untuk masuk ke VSC (code .)
-5. Ubuntu meminta password untuk Database server local
-6. Masuk kedalam IP local dan masukan password server local dengan username "Administrator" ![alt text](asset/site.png)
-7. Setelah masuk ke site, klik icon cari dan ketik "DocType" 
-8. Cari "Customer", "Invoice" ![alt text](asset/doctype.png)
-9. Kita bisa melihat list list Customer ![alt text](asset/Customer.png)/ List list Invoice ![alt text](asset/Invoice.png)disana dan dapat melihat preview format print untuk Invoice
+4. ketik `bench --site invoice.local install-app invoice_app`, code ini digunakan untuk membuat site(web frappe) dengan module invoice_app
+5. Jalankan server local untuk mendapatkan IP local(bench start) ![alt text](asset/IP.png), Juga bisa install app untuk masuk ke VSC (code .)
+6. Ubuntu meminta password untuk Database server local
+7. Masuk kedalam IP local dan masukan password server local dengan username "Administrator" ![alt text](asset/site.png)
+8. Setelah masuk ke site, klik icon cari dan ketik "DocType" 
+9. Untuk membuat sebuah doctype kita bisa klik tombol add doctype, lalu masukan nama doctype dan module(invoice_app) ![alt text](asset/addDoctype.png)
+10. Didalam Doctype tersebut kita dapat membuat field field yang kita perlukan ![alt text](asset/field.png) lalu save
+11. Doctype yang kita buat akan muncul di list doctype ("Customer", "Invoice" ![alt text](asset/doctype.png))
+12. Kita bisa membuat dan melihat list list Customer ![alt text](asset/Customer.png)/ List list Invoice ![alt text](asset/Invoice.png)disana dan dapat melihat preview format print untuk Invoice
 
 Cara Test API Di PostMan:
 1. GET
